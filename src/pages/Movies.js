@@ -1,14 +1,13 @@
 import React from 'react';
-
+import ApiData from '../components/ApiData'
 
 function Movies() {
-  return (
-    <div>
-     Movies
-    
-    </div>
 
-  );
-}
+  return (
+      <ApiData dataType="movies"/>
+    )
+  }
+
+
 
 export default Movies;
