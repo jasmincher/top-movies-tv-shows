@@ -1,7 +1,7 @@
 import React from 'react';
 import ApiData from '../components/ApiData'
 
-function Movies() {
+function Shows() {
 
   return (
       <ApiData dataType="tv"/>
@@ -10,4 +10,4 @@ function Movies() {
 
 
 
-export default Movies;
+export default Shows;
