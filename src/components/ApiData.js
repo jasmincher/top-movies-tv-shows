@@ -12,11 +12,12 @@ class ApiData extends React.Component {
   }
   //here we are initiating the API 
   componentDidMount = () => {
+    console.log('component did mount')
     this.results();
   }
 
-  results = () => {
-   
+   results = async () => {
+   console.log('in rsults function')
 
     var base_url = 'https://api.themoviedb.org/3/account/'
     var api_key = config.API_KEY;
@@ -31,6 +32,7 @@ class ApiData extends React.Component {
 
     for (let i = 1; i < 3; i++) {
       var pages = api_url + i;
+      
 
 
       axios.get(pages)
@@ -58,9 +60,11 @@ class ApiData extends React.Component {
 
 
   render() {
-    const posters = this.state.items.map(images => <Card image={images} />)
+    console.log('rendered')
 
     if (this.state.found) {
+      const posters = this.state.items.map(images => <Card image={images} cardType={this.props.cardType} />)
+
       return (
 
         <div className="posters-container">

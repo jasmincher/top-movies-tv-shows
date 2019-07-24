@@ -4,10 +4,9 @@ import ApiData from '../components/ApiData'
 function Shows() {
 
   return (
-      <ApiData dataType="tv"/>
+      <ApiData dataType="tv" cardType="tv"/>
     )
   }
-
 
 
 export default Shows;

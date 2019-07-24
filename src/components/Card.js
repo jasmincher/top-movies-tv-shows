@@ -5,17 +5,22 @@ import '../css/Card.css'
 function Card(props) {
     console.log(props)
     return (
-        <div className="card-container">
 
-            <div className="card-overlay">
-                <p>{props.image.title} {props.image.name}</p>
-                <p>{props.image.overview} </p>
+        <a href={`https://www.themoviedb.org/${props.cardType}/${props.image.id}`} target="_blank">
+
+            <div className="card-container" >
+
+                <div className="card-overlay">
+                    <p className="title">{props.image.title} {props.image.name}</p>
+                    <p className="overview">{props.image.overview} </p>
+                </div>
+                <img src={`https://image.tmdb.org/t/p/original/${props.image.poster_path}`} className="card-size" />
+
+
             </div>
-            <img src={`https://image.tmdb.org/t/p/original/${props.image.poster_path}`} className="card-size" />
+        </a>
 
 
-
-        </div>
 
 
     )

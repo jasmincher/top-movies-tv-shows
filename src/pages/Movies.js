@@ -4,10 +4,8 @@ import ApiData from '../components/ApiData'
 function Movies() {
 
   return (
-      <ApiData dataType="movies"/>
+      <ApiData dataType="movies" cardType="movie"/>
     )
   }
-
-
 
 export default Movies;

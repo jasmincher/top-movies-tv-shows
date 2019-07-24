@@ -9,6 +9,7 @@ import {
 
 import React from 'react';
 import { NavLink as Link } from 'react-router-dom';
+import '../css/Navbar.css'
 
 
 class Navbar extends React.Component {
@@ -30,26 +31,26 @@ class Navbar extends React.Component {
 
     render() {
         return (
-            <Navigation light color="dark" expand="md">
-                <NavbarToggler onClick={this.toggle} className="ml-2" />
+            <Navigation dark expand="md">
+                <NavbarToggler onClick={this.toggle}/>
                 <Collapse isOpen={this.state.isOpen} navbar>
 
 
                     <Nav className="mx-auto" >
                         <NavItem>
-                            <NavLink tag={Link} exact to="/" >
+                            <NavLink tag={Link} exact to="/" className="inactive" activeClassName="active">
                                 <h2>Home</h2>
                             </NavLink>
                         </NavItem>
 
                         <NavItem>
-                            <NavLink tag={Link} to="/movies" >
+                            <NavLink tag={Link} to="/movies" className="inactive" activeClassName="active">
                                 <h2>Movies </h2>
                             </NavLink>
 
                         </NavItem>
                         <NavItem>
-                            <NavLink tag={Link} to="/shows">
+                            <NavLink tag={Link} to="/shows" className="inactive" activeClassName="active">
                                 <h2>Shows </h2>
                             </NavLink>
                         </NavItem>

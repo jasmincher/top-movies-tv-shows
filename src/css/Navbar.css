@@ -1,0 +1,15 @@
+.navbar{
+    background-color: rgb(36, 35, 35);
+}
+
+.inactive{
+    color: pink;
+}
+
+.inactive:hover{
+    color: white;
+}
+
+.active{
+    color: white;
+}
