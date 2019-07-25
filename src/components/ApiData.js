@@ -3,7 +3,7 @@ import axios from 'axios'
 import Card from './Card'
 import '../css/ApiData.css'
 import config from '../config'
-
+import eclipse from '../assets/images/eclipse-loader.gif'
 
 class ApiData extends React.Component {
   state = {
@@ -16,8 +16,8 @@ class ApiData extends React.Component {
     this.results();
   }
 
-   results = async () => {
-   console.log('in rsults function')
+  results = async () => {
+    console.log('in rsults function')
 
     var base_url = 'https://api.themoviedb.org/3/account/'
     var api_key = config.API_KEY;
@@ -27,12 +27,12 @@ class ApiData extends React.Component {
 
 
     let api_url = base_url + account_id + `/favorite/${this.props.dataType}?api_key=` + api_key + '&session_id=' + session_id + '&language=en-US&sort_by=created_at.asc&page=';
-    
+
 
 
     for (let i = 1; i < 3; i++) {
       var pages = api_url + i;
-      
+
 
 
       axios.get(pages)
@@ -73,7 +73,9 @@ class ApiData extends React.Component {
       )
     }
     return (
-      <h6>Loading.....</h6>
+      <div className="loader">
+       <img src={eclipse} className="loader-img"/>
+      </div>
     )
   }
 

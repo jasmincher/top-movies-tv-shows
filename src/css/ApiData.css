@@ -2,5 +2,19 @@
     justify-content: center;
     display: flex;
     flex-wrap: wrap;
-  
 }
+
+
+   .loader{
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+   }
+
+   .loader-img{
+        width: 40px;
+        height: 40px;
+    
+   }
+

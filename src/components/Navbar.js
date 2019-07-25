@@ -39,19 +39,19 @@ class Navbar extends React.Component {
                     <Nav className="mx-auto" >
                         <NavItem>
                             <NavLink tag={Link} exact to="/" className="inactive" activeClassName="active">
-                                <h2>Home</h2>
+                                <h3>HOME</h3>
                             </NavLink>
                         </NavItem>
 
                         <NavItem>
                             <NavLink tag={Link} to="/movies" className="inactive" activeClassName="active">
-                                <h2>Movies </h2>
+                                <h3>MOVIES </h3>
                             </NavLink>
 
                         </NavItem>
                         <NavItem>
                             <NavLink tag={Link} to="/shows" className="inactive" activeClassName="active">
-                                <h2>Shows </h2>
+                                <h3>SHOWS</h3>
                             </NavLink>
                         </NavItem>
 
