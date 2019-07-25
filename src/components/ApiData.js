@@ -67,7 +67,7 @@ class ApiData extends React.Component {
 
       return (
 
-        <div className="posters-container">
+        <div id="posters-container">
           {posters}
         </div>
       )

@@ -1,20 +1,20 @@
-.posters-container{
+#posters-container{
     justify-content: center;
     display: flex;
     flex-wrap: wrap;
+    margin: 20px;
 }
 
 
-   .loader{
+.loader{
     height: 100vh;
     display: flex;
     justify-content: center;
     align-items: center;
-   }
+}
 
-   .loader-img{
-        width: 40px;
-        height: 40px;
-    
-   }
+.loader-img{
+    width: 40px;
+    height: 40px;    
+}
 
