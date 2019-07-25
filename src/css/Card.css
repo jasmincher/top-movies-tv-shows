@@ -30,3 +30,49 @@
     opacity: 1;  
     transition: opacity 0.1s ease-in-out; 
 }
+
+/***** Responsive Styles ****/
+
+
+/* Medium devices (tablets, less than 992px)*/
+@media (max-width: 991.98px){
+    .card-size{
+        width: 160px;
+        height: 100%;
+        border-radius: 10px; 
+    }
+
+
+    .card-overlay{
+        width: 160px;
+    }
+
+}
+
+ /* Small devices (landscape phones, less than 768px) */
+@media (max-width: 767.98px) {
+    .card-size{
+        width: 120px;
+        height: 100%;
+        border-radius: 10px; 
+    }
+
+    .card-overlay{
+        width: 120px;
+    }
+  
+}
+
+ /* Extra small devices (portrait phones, less than 576px) */
+@media (max-width: 575.98px) { 
+    .card-size{
+        width: 80px;
+        height: 100%;
+        border-radius: 10px; 
+    }
+
+    .card-overlay{
+        width: 80px;
+    }
+    
+}
