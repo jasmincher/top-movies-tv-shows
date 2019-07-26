@@ -3,6 +3,10 @@
   "name": "top-movies-tv-shows",
   "version": "0.1.0",
   "private": true,
+  "engines": {
+    "node": "12.7.0",
+    "npm": "6.10.0"
+  },
   "dependencies": {
     "axios": "^0.19.0",
     "bootstrap": "^4.3.1",
@@ -17,6 +21,7 @@
   "scripts": {
     "start": "react-scripts start",
     "build": "react-scripts build",
+    "production": "react-scripts production",
     "test": "react-scripts test",
     "eject": "react-scripts eject",
     "predeploy": "npm run build",
@@ -36,8 +41,5 @@
       "last 1 firefox version",
       "last 1 safari version"
     ]
-  },
-  "engines": {
-    "node": "12.7.0"
   }
 }
