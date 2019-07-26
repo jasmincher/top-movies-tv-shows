@@ -54,7 +54,6 @@
         border-radius: 10px; 
     }
 
-
     .card-overlay{
         width: 160px;
     }
@@ -85,6 +84,10 @@
 
     .card-overlay{
         width: 80px;
+    }
+
+    .card-container{
+        margin: 8px;    
     }
     
 }
