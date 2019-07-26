@@ -1,0 +1,18 @@
+{
+  "files": {
+    "main.css": "/top-movies-tv-shows/static/css/main.cc43a792.chunk.css",
+    "main.js": "/top-movies-tv-shows/static/js/main.5d9e4274.chunk.js",
+    "main.js.map": "/top-movies-tv-shows/static/js/main.5d9e4274.chunk.js.map",
+    "runtime~main.js": "/top-movies-tv-shows/static/js/runtime~main.6d05378e.js",
+    "runtime~main.js.map": "/top-movies-tv-shows/static/js/runtime~main.6d05378e.js.map",
+    "static/css/2.0624914a.chunk.css": "/top-movies-tv-shows/static/css/2.0624914a.chunk.css",
+    "static/js/2.732e138f.chunk.js": "/top-movies-tv-shows/static/js/2.732e138f.chunk.js",
+    "static/js/2.732e138f.chunk.js.map": "/top-movies-tv-shows/static/js/2.732e138f.chunk.js.map",
+    "index.html": "/top-movies-tv-shows/index.html",
+    "precache-manifest.ac3ac0cbd45b3b8330582b0421c4b8a8.js": "/top-movies-tv-shows/precache-manifest.ac3ac0cbd45b3b8330582b0421c4b8a8.js",
+    "service-worker.js": "/top-movies-tv-shows/service-worker.js",
+    "static/css/2.0624914a.chunk.css.map": "/top-movies-tv-shows/static/css/2.0624914a.chunk.css.map",
+    "static/css/main.cc43a792.chunk.css.map": "/top-movies-tv-shows/static/css/main.cc43a792.chunk.css.map",
+    "static/media/eclipse-loader.gif": "/top-movies-tv-shows/static/media/eclipse-loader.3c64a786.gif"
+  }
+}
