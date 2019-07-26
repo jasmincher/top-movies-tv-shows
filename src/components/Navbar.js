@@ -4,7 +4,8 @@ import {
     NavbarToggler,
     Nav,
     NavItem,
-    NavLink
+    NavLink,
+    NavbarBrand
 } from 'reactstrap';
 
 import React from 'react';
@@ -32,7 +33,9 @@ class Navbar extends React.Component {
     render() {
         return (
             <Navigation dark expand="md">
-                <NavbarToggler onClick={this.toggle}/>
+                <NavbarBrand></NavbarBrand>
+                <NavbarToggler onClick={this.toggle} />
+
                 <Collapse isOpen={this.state.isOpen} navbar>
 
 
