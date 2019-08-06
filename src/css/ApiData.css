@@ -1,7 +1,13 @@
 #posters-container{
     justify-content: center;
-    display: flex;
-    flex-wrap: wrap;
+    /* display: flex;
+    flex-wrap: wrap; */
+
+
+    display: grid !important;
+    grid-template-columns: auto auto auto auto auto auto;
+
+
     margin-top: 20px;
     margin-bottom: 20px;
    

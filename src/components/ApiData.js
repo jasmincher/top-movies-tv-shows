@@ -2,7 +2,7 @@ import React from 'react';
 import axios from 'axios'
 import Card from './Card'
 import '../css/ApiData.css'
-import config from '../config'
+import config from '../config/config'
 import eclipse from '../assets/images/eclipse-loader.gif'
 
 class ApiData extends React.Component {
@@ -20,9 +20,10 @@ class ApiData extends React.Component {
     console.log('in rsults function')
 
     var base_url = 'https://api.themoviedb.org/3/account/'
-    var api_key = config.API_KEY;
-    var session_id = config.SESSION_ID;
-    var account_id = config.ACCOUNT_ID;
+
+    const api_key = process.env.NODE_ENV === 'development' ? process.env.REACT_APP_API_KEY : process.env.API_KEY;
+    const session_id = process.env.NODE_ENV === 'development' ? process.env.REACT_APP_SESSION_ID : process.env.SESSION_ID;
+    const account_id = process.env.NODE_ENV === 'development' ? process.env.REACT_APP_ACCOUNT_ID : process.env.ACCOUNT_ID;
 
 
 
