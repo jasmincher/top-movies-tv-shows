@@ -2,7 +2,6 @@ import React from 'react';
 import axios from 'axios'
 import Card from './Card'
 import '../css/ApiData.css'
-import config from '../config/config'
 import eclipse from '../assets/images/eclipse-loader.gif'
 
 class ApiData extends React.Component {
