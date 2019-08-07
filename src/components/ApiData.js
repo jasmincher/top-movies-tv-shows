@@ -24,9 +24,9 @@ class ApiData extends React.Component {
     // const session_id = process.env.NODE_ENV === 'development' ? process.env.REACT_APP_SESSION_ID : process.env.SESSION_ID;
     // const account_id = process.env.NODE_ENV === 'development' ? process.env.REACT_APP_ACCOUNT_ID : process.env.ACCOUNT_ID;
 
-    const api_key = process.env.NODE_ENV !== 'production' ? process.env.REACT_APP_API_KEY : process.env.API_KEY;
-    const session_id = process.env.NODE_ENV !== 'production' ? process.env.REACT_APP_SESSION_ID : process.env.SESSION_ID;
-    const account_id = process.env.NODE_ENV !== 'production' ? process.env.REACT_APP_ACCOUNT_ID : process.env.ACCOUNT_ID;
+    const api_key = process.env.NODE_ENV !== 'development' ? process.env.API_KEY : process.env.REACT_APP_API_KEY ;
+    const session_id = process.env.NODE_ENV !== 'development' ? process.env.SESSION_ID : process.env.REACT_APP_SESSION_ID;
+    const account_id = process.env.NODE_ENV !== 'development' ? process.env.ACCOUNT_ID : process.env.REACT_APP_ACCOUNT_ID ;
 
 
 
