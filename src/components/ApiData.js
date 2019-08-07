@@ -20,9 +20,13 @@ class ApiData extends React.Component {
 
     var base_url = 'https://api.themoviedb.org/3/account/'
 
-    const api_key = process.env.NODE_ENV === 'development' ? process.env.REACT_APP_API_KEY : process.env.API_KEY;
-    const session_id = process.env.NODE_ENV === 'development' ? process.env.REACT_APP_SESSION_ID : process.env.SESSION_ID;
-    const account_id = process.env.NODE_ENV === 'development' ? process.env.REACT_APP_ACCOUNT_ID : process.env.ACCOUNT_ID;
+    // const api_key = process.env.NODE_ENV === 'development' ? process.env.REACT_APP_API_KEY : process.env.API_KEY;
+    // const session_id = process.env.NODE_ENV === 'development' ? process.env.REACT_APP_SESSION_ID : process.env.SESSION_ID;
+    // const account_id = process.env.NODE_ENV === 'development' ? process.env.REACT_APP_ACCOUNT_ID : process.env.ACCOUNT_ID;
+
+    const api_key = process.env.NODE_ENV !== 'production' ? process.env.REACT_APP_API_KEY : process.env.API_KEY;
+    const session_id = process.env.NODE_ENV !== 'production' ? process.env.REACT_APP_SESSION_ID : process.env.SESSION_ID;
+    const account_id = process.env.NODE_ENV !== 'production' ? process.env.REACT_APP_ACCOUNT_ID : process.env.ACCOUNT_ID;
 
 
 
