@@ -24,9 +24,9 @@ class ApiData extends React.Component {
     // const session_id = process.env.NODE_ENV === 'development' ? process.env.REACT_APP_SESSION_ID : process.env.SESSION_ID;
     // const account_id = process.env.NODE_ENV === 'development' ? process.env.REACT_APP_ACCOUNT_ID : process.env.ACCOUNT_ID;
 
-    const api_key = process.env.NODE_ENV == 'development' ? process.env.REACT_APP_API_KEY : process.env.API_KEY;
-    const session_id = process.env.NODE_ENV == 'development' ? process.env.REACT_APP_SESSION_ID : process.env.SESSION_ID;
-    const account_id = process.env.NODE_ENV == 'development' ? process.env.REACT_APP_ACCOUNT_ID : process.env.ACCOUNT_ID;
+    const api_key =  process.env.REACT_APP_API_KEY
+    const session_id = process.env.REACT_APP_SESSION_ID
+    const account_id = process.env.REACT_APP_ACCOUNT_ID
 
     let api_url = base_url + account_id + `/favorite/${this.props.dataType}?api_key=` + api_key + '&session_id=' + session_id + '&language=en-US&sort_by=created_at.asc&page=';
 
