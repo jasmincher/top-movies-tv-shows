@@ -62,6 +62,7 @@ class Navbar extends React.Component {
 
                     </Nav>
                 </Collapse>
+
             </Navigation>
 
         )

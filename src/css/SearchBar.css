@@ -1,0 +1,19 @@
+
+
+
+div.search-bar-container::before{
+    font-family: FontAwesome;
+    content: "\f002";
+    font-size: 17px;
+  	position: absolute;
+    padding: 10px 25px;
+    color: rgb(128, 128, 128);
+
+}
+
+.search-bar{
+    width: 100%;
+    padding: 10px 50px;
+
+
+}
