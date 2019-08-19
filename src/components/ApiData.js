@@ -4,15 +4,18 @@ import Card from './Card'
 import '../css/ApiData.css'
 import eclipse from '../assets/images/eclipse-loader.gif'
 import SearchBar from '../components/SearchBar'
+import { async } from 'q';
 
 
 class ApiData extends React.Component {
-  state = {
-    items: [],
-    genreTypes: [],
-    filterName: '',
-    found: false
-  }
+
+    state = {
+      items: [],
+      filterNames: [],
+      genreTypes: [],
+      found: false
+    }
+  
   //here we are initiating the API 
   componentDidMount = () => {
     console.log('component did mount')
@@ -32,17 +35,20 @@ class ApiData extends React.Component {
     let genreNames = `https://api.themoviedb.org/3/genre/${this.props.dataType}/list?api_key=` + api_key;
 
 
+    var api_data = []
+    
+
 
     for (let i = 1; i < 10; i++) {
       var pages = api_url + i;
 
+
       axios.get(pages)
         .then((resolve) => {
-          //this is mapping through each item in the api and pushing each item into the items array
-          resolve.data.results.map(item => { this.state.items.push(item) })
-          // console.log(this.state.items)
-          //this is making the boolean true so it can display the results
-          this.setState({ found: true });
+         
+          
+          resolve.data.results.map(item => { api_data.push(item) })
+          this.setState({items: api_data, data: api_data, found: true})
           console.log('Yay we got the posters')
 
         })
@@ -53,14 +59,14 @@ class ApiData extends React.Component {
         })
 
     }
-
-
+       
 
     axios.get(genreNames)
       .then((resolved) => {
-        resolved.data.genres.map(genre => { this.state.genreTypes.push(genre) })
+        resolved.data.results.map(genre => { this.state.genreTypes.push(genre) })
         // console.log(this.state.genreTypes)
         this.setState({ found: true });
+        
 
       })
 
@@ -72,28 +78,41 @@ class ApiData extends React.Component {
 
   }
 
-  searchInput = (e) => {
+
+  handleFilter = (e) => {
     let input = e.target.value;
     console.log(input)
+
+    if(input === ''){
+      // this.setState({})
+      this.setState({items: this.state.data})
+      return;
+    }
+    var titles = this.state.data.filter(function (item) {
+      // console.log(item.title === input || item.name)
+      console.log(item)
+      return (item.title.includes(input));
+    })
+    this.setState({
+      items: titles
+    })
+
+    console.log(titles)
   }
 
-
-  handleFilter = () => {
-    
-    
-  }
+ 
 
   render() {
     if (this.state.found) {
       const posters = this.state.items.map(images => <Card image={images} cardType={this.props.cardType} />)
-      // console.log(posters.image.name)
-
+  
       return (
         <div>
-          <SearchBar searchInput={this.searchInput} />
+          <SearchBar handleFilter={this.handleFilter} />
 
           <div id="posters-container">
             {posters}
+
           </div>
         </div>
       )
@@ -105,7 +124,7 @@ class ApiData extends React.Component {
       </div>
     )
   }
-
+  
 }
 
 export default ApiData;

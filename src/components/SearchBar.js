@@ -9,7 +9,7 @@ class SearchBar extends React.Component {
 
         return (
             <div className="search-bar-container">
-                    <input className="search-bar" id="search" type="text" placeholder="Search by genre" onChange={(e) => {this.props.searchInput(e)}}> 
+                    <input className="search-bar" id="search" type="text" placeholder="Search by genre" onChange={(e) => {this.props.handleFilter(e)}}> 
                     </input>
             </div>
         )
