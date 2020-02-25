@@ -39,7 +39,7 @@ class ApiData extends React.Component {
 
 
 
-    for (let i = 1; i < 5; i++) {
+    for (let i = 1; i < 8; i++) {
       var pages = api_url + i;
 
 
