@@ -1,5 +1,26 @@
 #home-container{
     text-align: center;
-    margin: 3% 5% auto 5%;
-    line-height: 25px;
+    width: 600px;
+    line-height: 30px;
+    margin: 40px auto 50px auto;
 }
+
+
+@media (max-width: 400px) { 
+    #home-container{
+        width: 320px ;
+    }
+ }
+
+ @media (min-width: 401px) and (max-width: 575px) { 
+    #home-container{
+        width: 403px ;
+    }
+ }
+
+@media (min-width: 576px) and (max-width: 767.98px) { 
+    #home-container{
+        width: 500px ;
+    }
+ }
+
