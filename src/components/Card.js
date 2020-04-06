@@ -1,10 +1,15 @@
 import React from 'react';
 import '../css/Card.css'
+import { missing } from '../components/MissingPosters';
 
 
 function Card(props) {
-    // console.log(props.genres[14])
-    // const idk = props.image.genre_ids === props.genres[14].id ? props.genres[14].name : "wrong ";
+    
+    let missing_poster;
+    let poster = `https://image.tmdb.org/t/p/original/${props.image.poster_path}`;
+    missing.map( i => {if( i.title == props.image.title ) missing_poster = i.posterImg });
+    const poster_path = props.image.poster_path == null ? missing_poster : poster;
+
 
     return (
 
@@ -15,10 +20,9 @@ function Card(props) {
                 <div className="card-overlay">
                     <p className="card-title">{props.image.title} {props.image.name}</p>
                     <p className="card-overview">{props.image.overview} </p>
-                    {/* <p>{idk}</p> */}
-
                 </div>
-                <img src={`https://image.tmdb.org/t/p/original/${props.image.poster_path}`} className="card-size" />
+
+                <img src={poster_path} className="card-size"/>
 
 
             </div>
