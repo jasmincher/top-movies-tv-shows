@@ -6,7 +6,6 @@ import eclipse from '../assets/images/eclipse-loader.gif'
 import SearchBar from '../components/SearchBar'
 import _ from 'lodash';
 
-
 class ApiData extends React.Component {
 
   state = {
@@ -19,12 +18,12 @@ class ApiData extends React.Component {
 
   //here we are initiating the API 
   componentDidMount = () => {
-    console.log('component did mount')
+    // console.log('component did mount')
     this.results();
   }
 
   results = async () => {
-    console.log('in results function')
+    // console.log('in results function')
 
     var base_url = 'https://api.themoviedb.org/3/account/'
     const api_key = process.env.REACT_APP_API_KEY;
@@ -47,7 +46,7 @@ class ApiData extends React.Component {
         .then((resolve) => {
           resolve.data.results.map(item => { api_data.push(item) })
           this.setState({ items: api_data, data: api_data, found: true })
-          console.log('Yay we got the posters')
+          // console.log('Yay we got the posters')
 
         })
 
@@ -64,7 +63,7 @@ class ApiData extends React.Component {
       .then((resolve) => {
         resolve.data.genres.map(genre => { genres.push(genre) })
         this.setState({ genreTypes: genres, genreList: genres, found: true });
-        console.log(resolve.data.genres)
+        // console.log(resolve.data.genres)
 
       })
 
@@ -137,7 +136,7 @@ class ApiData extends React.Component {
       return (
         <div>
           <SearchBar handleFilter={this.handleFilter} genreTypes={[{ name: "Select Genre..." }, ...this.state.genreList]} />
-          <p className="no-results"> Nothing found </p>
+          <p className="no-results"> I don't have a favorite title in this genre right now </p>
           </div>
       )
     }
