@@ -1,5 +1,5 @@
 import React from 'react';
-import '../css/Card.css'
+import '../css/Card.css';
 import { missing } from '../components/MissingPosters';
 
 
@@ -27,8 +27,6 @@ function Card(props) {
 
             </div>
         </a>
-
-
 
 
     )
