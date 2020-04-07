@@ -5,9 +5,7 @@
 }
 
 .card-container{
-    margin: 15px;
     position: relative;
-   
 }
 
 .card-overlay{
@@ -34,12 +32,7 @@
     margin-bottom: 5px !important;
     font-size: 12.4px;
     font-weight: bolder;
-  
 }
-
-
-
-
 
 
 
@@ -84,10 +77,6 @@
 
     .card-overlay{
         width: 80px;
-    }
-
-    .card-container{
-        margin: 8px;    
     }
     
 }
